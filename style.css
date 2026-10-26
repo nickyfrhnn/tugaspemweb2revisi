@@ -1,0 +1,353 @@
+/* ==================================================
+   TEMA TIMEZONE PIXEL ARCADE - UNGU NEON
+   Gaya arcade retro, pixel, neon, dan game center.
+   Semua halaman memakai stylesheet yang sama.
+   ================================================== */
+
+:root {
+    --bg-deep: #100820;
+    --bg-purple: #1c0d35;
+    --purple: #6e35c8;
+    --purple-bright: #a970ff;
+    --pink-neon: #ff62d2;
+    --cyan-neon: #67f5ff;
+    --yellow-neon: #ffe66d;
+    --panel: #21123c;
+    --panel-light: #2d1a50;
+    --text: #f4edff;
+    --muted: #c7b6e8;
+    --border: #69449d;
+    --shadow: 0 0 0 3px #100820, 0 0 0 5px #5c2ba3, 0 12px 0 #090412;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text);
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.7;
+    background-color: var(--bg-deep);
+    background-image:
+        linear-gradient(rgba(167, 111, 255, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(167, 111, 255, 0.055) 1px, transparent 1px),
+        radial-gradient(ellipse at top, #38205f 0%, #180b2b 48%, #0b0614 100%);
+    background-size: 24px 24px, 24px 24px, auto;
+    background-attachment: fixed;
+}
+
+/* Header bergaya papan skor arcade */
+.site-header {
+    position: relative;
+    padding: 24px 4% 18px;
+    background: linear-gradient(180deg, #281344 0%, #160a27 100%);
+    border-bottom: 4px solid var(--pink-neon);
+    box-shadow: 0 5px 0 #0a0411, 0 0 28px rgba(255, 98, 210, 0.22);
+}
+
+.brand {
+    max-width: 1200px;
+    margin: 0 auto 15px;
+    color: var(--cyan-neon);
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 #4d2384, 0 0 12px rgba(103, 245, 255, 0.45);
+}
+
+.brand span {
+    color: var(--pink-neon);
+    text-shadow: 3px 3px 0 #68245d, 0 0 12px rgba(255, 98, 210, 0.55);
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 8px 12px;
+    color: var(--text);
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    background: #2a1748;
+    border: 2px solid #7c51b8;
+    border-radius: 3px;
+    box-shadow: 3px 3px 0 #0a0411;
+    transition: color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible,
+.main-nav a[aria-current="page"] {
+    color: #160923;
+    background: var(--cyan-neon);
+    border-color: var(--cyan-neon);
+    box-shadow: 3px 3px 0 #3d2462, 0 0 14px rgba(103, 245, 255, 0.35);
+    transform: translate(-1px, -2px);
+    outline: none;
+}
+
+/* Konten utama terlihat seperti panel game */
+main,
+.page-content,
+.container {
+    width: min(1100px, 92%);
+    margin: 38px auto;
+    padding: clamp(22px, 4vw, 40px);
+    background: linear-gradient(145deg, rgba(42, 24, 72, 0.98), rgba(25, 13, 44, 0.98));
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    box-shadow: var(--shadow), 0 0 30px rgba(125, 64, 220, 0.14);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--cyan-neon);
+    line-height: 1.35;
+    text-shadow: 2px 2px 0 #4b237d;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+h2 {
+    margin-top: 30px;
+    padding-bottom: 8px;
+    font-size: clamp(1.2rem, 3vw, 1.65rem);
+    border-bottom: 2px dashed #7650a8;
+}
+
+h3 {
+    color: var(--pink-neon);
+}
+
+p {
+    margin: 12px 0;
+}
+
+ul,
+ol {
+    padding-left: 28px;
+}
+
+li {
+    padding: 2px 0;
+}
+
+a {
+    color: var(--cyan-neon);
+}
+
+a:hover {
+    color: var(--pink-neon);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid var(--cyan-neon);
+    border-radius: 3px;
+    box-shadow: 5px 5px 0 #090412, 0 0 18px rgba(103, 245, 255, 0.17);
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    image-rendering: pixelated;
+}
+
+.hero-subtitle {
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+/* Tabel: pertahankan susunan baris dan kolom asli */
+.table-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 22px 0;
+    border: 2px solid var(--purple-bright);
+    background: #170b29;
+}
+
+table {
+    width: 100%;
+    min-width: 540px;
+    border-collapse: collapse;
+    table-layout: auto;
+    background: #1b0e2e;
+    border: 2px solid var(--purple-bright);
+}
+
+caption {
+    padding: 12px;
+    color: var(--yellow-neon);
+    font-size: 1.05rem;
+    font-weight: 900;
+    caption-side: top;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+    overflow-wrap: break-word;
+    border: 1px solid #68469b;
+}
+
+thead th,
+tr:first-child th {
+    color: #160923;
+    background: var(--cyan-neon);
+    font-weight: 900;
+}
+
+tbody tr:nth-child(even) {
+    background: #2b1947;
+}
+
+tbody tr:hover {
+    background: #422362;
+}
+
+/* Formulir bernuansa mesin arcade */
+form {
+    max-width: 760px;
+}
+
+label {
+    display: inline-block;
+    margin: 5px 0;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+    font: inherit;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    width: 100%;
+    margin: 4px 0 12px;
+    padding: 11px 13px;
+    color: var(--text);
+    background: #140a23;
+    border: 2px solid #67439b;
+    border-radius: 3px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--cyan-neon);
+    outline: 2px solid rgba(103, 245, 255, 0.2);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--pink-neon);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    margin: 8px 8px 0 0;
+    padding: 10px 18px;
+    color: #160923;
+    font-weight: 900;
+    background: var(--pink-neon);
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 4px 4px 0 #5d2764;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    color: #160923;
+    background: var(--yellow-neon);
+    transform: translate(-1px, -1px);
+}
+
+mark {
+    padding: 2px 6px;
+    color: #160923;
+    background: var(--yellow-neon);
+}
+
+.site-footer {
+    padding: 18px 20px 30px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.85rem;
+    border-top: 2px dashed #4d326f;
+}
+
+@media (max-width: 640px) {
+    .site-header {
+        padding: 20px 4% 16px;
+    }
+
+    .main-nav {
+        gap: 7px;
+    }
+
+    .main-nav a {
+        padding: 7px 9px;
+        font-size: 0.75rem;
+    }
+
+    main,
+    .page-content,
+    .container {
+        width: 94%;
+        margin: 25px auto;
+        padding: 20px 15px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
